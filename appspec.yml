@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - MyApp:
+      Type: Kubernetes::Manifest
+      Properties:
+        ClusterName: my-cluster
+        Namespace: default
+        ResourceType: manifest
+        Path: k8s/deployment.yaml
