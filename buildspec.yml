@@ -19,6 +19,9 @@ phases:
       - docker push 739275480317.dkr.ecr.ap-south-1.amazonaws.com/brain_task_app:latest
       - echo Writing image definitions...
       - printf '[{"name":"brain_task_app","imageUri":"739275480317.dkr.ecr.ap-south-1.amazonaws.com/brain_task_app:latest"}]' > imagedefinitions.json
+      - echo Updating kubeconfig...
+      - aws eks update-kubeconfig --region ap-south-1 --name my-cluster
+
 
 artifacts:
   files:
