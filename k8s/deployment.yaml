@@ -18,7 +18,7 @@ spec:
         - name: brain-task-app
           image: 739275480317.dkr.ecr.ap-south-1.amazonaws.com/brain_task_app:latest
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           imagePullPolicy: Always  # <-- Optional but recommended for latest tags
 
 ---
@@ -33,5 +33,5 @@ spec:
     app: brain-task-app
   ports:
     - port: 3000       # Client-facing port (external)
-      targetPort: 80   # Matches containerPort
+      targetPort: 3000  # Matches containerPort
       protocol: TCP
