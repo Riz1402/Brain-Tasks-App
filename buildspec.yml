@@ -25,5 +25,4 @@ phases:
 
 artifacts:
   files:
-    - appspec.yml
     - k8s/*
