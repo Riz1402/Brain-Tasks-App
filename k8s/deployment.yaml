@@ -32,6 +32,6 @@ spec:
   selector:
     app: brain-task-app
   ports:
-    - port: 80       # Client-facing port (external)
+    - port: 3000       # Client-facing port (external)
       targetPort: 80  # Matches containerPort
       protocol: TCP
